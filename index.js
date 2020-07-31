@@ -33,9 +33,12 @@ const { fetchISSFlyOverTimes } = require('./iss');
 
 const { nextISSTimesForMyLocation } = require('./iss');
 
+
 const printPassTimes = function(passTimes) {
   for (let pass of passTimes) {
+    // set new Date object that starts from 1970-01-01
     const dateTime = new Date(0);
+    // convert seconds to UTC time
     dateTime.setUTCSeconds(pass["risetime"]);
 
     const duration = pass["duration"];
