@@ -25,8 +25,8 @@ const exCoords = { latitude: '-53.45930', longitude: '-113.41450'};
 
 fetchISSFlyOverTimes(exCoords, (error, times) => {
   if (error) {
-    console.log(error);
+    console.log("It didn't work!", error);
     return;
   }
-  console.log(times);
+  console.log("It worked! Returned flyover times: " + "\n", times);
 });
