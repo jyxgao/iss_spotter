@@ -80,9 +80,9 @@ const nextISSTimesForMyLocation = function(callback) {
         }
 
         callback(null, nextPasses);
-      })
-    })
-  })
+      });
+    });
+  });
 };
 
 module.exports = { fetchMyIP, fetchCoordByIP, fetchISSFlyOverTimes, nextISSTimesForMyLocation };
